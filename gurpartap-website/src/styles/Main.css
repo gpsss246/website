@@ -1,0 +1,109 @@
+.header {
+  font-family: "the-seasons", sans-serif;
+  font-style: regular;
+  font-weight: 100px;
+  font-size: 100px;
+  color: #69433c;
+  margin-bottom: -20px;
+  margin-left: 5px;
+}
+
+body {
+  background-color: #f1e4d2;
+  color: #f1e4d2;
+}
+
+.sword {
+  transform: scaleX(-1);
+}
+
+.drawing {
+  border-radius: 50%;
+  position: absolute;
+  width: 300px;
+  z-index: 1;
+}
+
+.sun {
+  animation: rotation 16s infinite linear;
+  top: 0;
+  left: 0;
+  width: 400px;
+  position: relative;
+}
+.image-container {
+  position: relative;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.fade {
+  animation-duration: 1s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.fadeInUp-animation {
+  animation: 1.5s fadeInUp;
+}
+.delay-1 {
+  animation-delay: 0.6s;
+}
+.delay-2 {
+  animation-delay: 0.7s;
+}
+.delay-3 {
+  animation-delay: 0.8s;
+}
+.delay-3 {
+  animation-delay: 0.9s;
+}
+
+.animate.roll {
+  animation-name: animate-roll;
+}
+@keyframes animate-roll {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0) rotate(360deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1) rotate(0deg);
+  }
+}
